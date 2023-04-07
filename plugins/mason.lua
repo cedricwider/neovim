@@ -20,7 +20,7 @@ return {
     "jay-babu/mason-nvim-dap.nvim",
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
-      ensure_installed = { "typescript", "ruby", "vue", "typescript" },
+      ensure_installed = { "chrome", "node2", "js" },
     },
   },
 }
