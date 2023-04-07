@@ -18,7 +18,15 @@ return {
             env = { CI = true },
             cwd = function(_) return vim.fn.getcwd() end,
           },
-          require "neotest-rspec",
+          require "neotest-rspec" {
+            rspec_cmd = function()
+              return vim.tbl_flatten {
+                "bundle",
+                "exec",
+                "rspec",
+              }
+            end,
+          },
         },
       }
     end,
