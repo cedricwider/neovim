@@ -14,9 +14,13 @@ return {
     event = "User AstroFile",
     config = function() require("hop").setup() end,
   },
+  { "sindrets/diffview.nvim" },
   {
     "TimUntersberger/neogit",
-    requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+    },
     event = "User AstroFile",
     config = function()
       require("neogit").setup {
