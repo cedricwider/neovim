@@ -16,11 +16,14 @@ return {
   },
   {
     "TimUntersberger/neogit",
-    requires = "nvim-lua/plenary.nvim",
+    requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
     event = "User AstroFile",
     config = function()
       require("neogit").setup {
         disable_commit_confirmation = true,
+        integrations = {
+          diffview = true,
+        },
         commit_popup = {
           kind = "floating",
         },
