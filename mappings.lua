@@ -98,6 +98,16 @@ return {
     ["<leader>tk"] = { "<cmd>lua require('neotest').jump.prev()<cr>", desc = "Jump to prev test" },
     ["<leader>tn"] = { "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
     ["<leader>ts"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Sumamry" },
+    --
+    -- Git
+    --
+    ["<leader>ga"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
+    ["<leader>gA"] = { function() require("gitsigns").stage_buffer() end, desc = "Stage Git buffer" },
+    ["<leader>gs"] = { function() require("neogit").open { kind = "split" } end, desc = "Stage Git buffer" },
+    --
+    -- LSP
+    --
+    ["<leader>lt"] = { function() require("trouble").toggle() end, desc = "Trouble toggle" },
   },
   t = {
     -- setting a mapping to false will disable it

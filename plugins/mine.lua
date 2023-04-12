@@ -15,6 +15,11 @@ return {
     config = function() require("hop").setup() end,
   },
   {
+    "TimUntersberger/neogit",
+    event = "User AstroFile",
+    config = function() require("neogit").setup() end,
+  },
+  {
     "mattn/emmet-vim",
     event = "User AstroFile",
   },
