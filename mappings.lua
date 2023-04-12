@@ -104,6 +104,7 @@ return {
     ["<leader>ga"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
     ["<leader>gA"] = { function() require("gitsigns").stage_buffer() end, desc = "Stage Git buffer" },
     ["<leader>gs"] = { function() require("neogit").open { kind = "split" } end, desc = "Stage Git buffer" },
+    ["<leader>gm"] = { function() require("neogit").open { "commit" } end, desc = "Stage Git buffer" },
     --
     -- LSP
     --

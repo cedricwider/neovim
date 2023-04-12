@@ -16,8 +16,16 @@ return {
   },
   {
     "TimUntersberger/neogit",
+    requires = "nvim-lua/plenary.nvim",
     event = "User AstroFile",
-    config = function() require("neogit").setup() end,
+    config = function()
+      require("neogit").setup {
+        disable_commit_confirmation = true,
+        commit_popup = {
+          kind = "floating",
+        },
+      }
+    end,
   },
   {
     "mattn/emmet-vim",
