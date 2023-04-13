@@ -12,6 +12,7 @@ return {
     ["<leader><tab>"] = { "<cmd>Other<cr>", desc = "Jump to 'other' file" },
     ["<leader><space>"] = { function() require("harpoon.ui").nav_next() end, desc = "Harpoon next" },
     ["<space><leader>"] = { function() require("harpoon.ui").nav_prev() end, desc = "Harpoon prev" },
+    ["<leader>w"] = nil,
     ["<leader>s"] = { "<cmd>wall<cr>", desc = "Save all files" },
     ["<leader>x"] = { "<cmd>qa<cr>", desc = "Quit neovim" },
     ["[<space>"] = {
