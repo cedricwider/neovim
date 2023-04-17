@@ -11,6 +11,9 @@ return {
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.indent.indent-tools-nvim" },
+  { import = "astrocommunity.motion.harpoon" },
   {
     -- further customize the options set by the community
     "copilot.lua",
