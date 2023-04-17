@@ -11,13 +11,9 @@ local function paste_blank_line(line)
   vim.api.nvim_buf_set_lines(0, line, line, true, lines)
 end
 
-local function paste_blank_line_above()
-  paste_blank_line(vim.fn.line(".") - 1)
-end
+local function paste_blank_line_above() paste_blank_line(vim.fn.line "." - 1) end
 
-local function paste_blank_line_below()
-  paste_blank_line(vim.fn.line("."))
-end
+local function paste_blank_line_below() paste_blank_line(vim.fn.line ".") end
 
 local function toggle_option(option, x, y)
   local on = x or true
