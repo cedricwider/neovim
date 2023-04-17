@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.utility.noice-nvim" },
