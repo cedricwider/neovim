@@ -9,6 +9,8 @@ return {
     -- second key is the lefthand side of the map
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
+    ["[q"] = { "<cmd>cprevious<cr>", desc = "Previous Quickfix Item" },
+    ["]q"] = { "<cmd>cnext<cr>", desc = "Next Quickfix Item" },
     ["<leader><tab>"] = { "<cmd>Other<cr>", desc = "Jump to 'other' file" },
     ["<leader><space>"] = { function() require("harpoon.ui").nav_next() end, desc = "Harpoon next" },
     ["<space><leader>"] = { function() require("harpoon.ui").nav_prev() end, desc = "Harpoon prev" },
