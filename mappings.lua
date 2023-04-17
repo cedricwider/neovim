@@ -64,7 +64,6 @@ return {
     --
     ["<leader>e"] = false, --unmap default mapping
     ["<leader>fe"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
-    ["<leader>o"] = false,
     ["<M-e>"] = {
       function()
         if vim.bo.filetype == "neo-tree" then
@@ -82,7 +81,7 @@ return {
     --
     -- Jump
     --
-    ["<leader>j"] = { name = "Jump" },
+    ["<leader>j"] = { name = "↗ Jump" },
     ["<leader>jb"] = { "<cmd>HopWordBC<cr>", desc = "Before Cursor" },
     ["<leader>jj"] = { "<cmd>HopLineAC<cr>", desc = "Line downwards" },
     ["<leader>jl"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "List marks" },
@@ -101,6 +100,14 @@ return {
     ["<leader>tk"] = { "<cmd>lua require('neotest').jump.prev()<cr>", desc = "Jump to prev test" },
     ["<leader>tn"] = { "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
     ["<leader>ts"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Sumamry" },
+    --
+    -- Overseer
+    --
+    ["<leader>o"] = { name = "🫣 Overseer" },
+    ["<leader>ot"] = { "<cmd>lua require('overseer').toggle()<cr>", desc = "Toggle" },
+    ["<leader>or"] = { "<cmd>OverseerRun<cr>", desc = "Run Task" },
+    ["<leader>oi"] = { "<cmd>OverseerInfo<cr>", desc = "Show information" },
+    ["<leader>ol"] = { "<cmd>OverseerTaskAction<cr>", desc = "List tasks" },
     --
     -- Git
     --
