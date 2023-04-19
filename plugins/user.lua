@@ -5,6 +5,12 @@ return {
     config = function() require("nvim-surround").setup() end,
   },
   {
+    "jakewvincent/mkdnflow.nvim",
+    event = "User AstroFile",
+    rocks = "luautf8",
+    config = function() require("mkdnflow").setup() end,
+  },
+  {
     "phaazon/hop.nvim",
     event = "User AstroFile",
     config = function() require("hop").setup() end,
