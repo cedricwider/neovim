@@ -9,7 +9,7 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight" },
   { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.debugging.nvim-bqf" },
-  { import = "astrocommunity.note-taking.obsidian-nvim" },
+  -- { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.scrolling.mini-animate" },
