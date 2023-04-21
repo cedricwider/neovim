@@ -63,6 +63,7 @@ return {
     -- window management/navigation
     --
     ["<leader>e"] = false, --unmap default mapping
+    ["<leader>fz"] = { function() require("telekasten").find_notes() end, desc = "Find zettels" },
     ["<leader>fe"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
     ["<M-e>"] = {
       function()
@@ -119,6 +120,14 @@ return {
     -- LSP
     --
     ["<leader>lt"] = { function() require("trouble").toggle() end, desc = "Trouble toggle" },
+    --
+    -- Telekasten
+    --
+    ["<leader>z"] = { name = "📔 Zettelkasten" },
+    ["<leader>zn"] = { function() require("telekasten").new_note() end, desc = "Create note" },
+    ["<leader>zt"] = { function() require("telekasten").new_templated_note() end, desc = "Create note" },
+    ["<leader>zl"] = { function() require("telekasten").insert_link { i = true } end, desc = "Insert link" },
+    ["<leader>zz"] = { function() require("telekasten").follow_link() end, desc = "Insert link" },
   },
   t = {
     -- setting a mapping to false will disable it

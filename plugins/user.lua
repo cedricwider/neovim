@@ -1,14 +1,22 @@
 return {
   {
+    "renerocksai/telekasten.nvim",
+    event = "User AstroFile",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "renerocksai/calendar-vim",
+      "nvim-telescope/telescope-media-files.nvim",
+    },
+    config = function()
+      require("telekasten").setup {
+        home = vim.fn.expand "~/work/notes/",
+      }
+    end,
+  },
+  {
     "kylechui/nvim-surround",
     event = "User AstroFile",
     config = function() require("nvim-surround").setup() end,
-  },
-  {
-    "jakewvincent/mkdnflow.nvim",
-    event = "User AstroFile",
-    rocks = "luautf8",
-    config = function() require("mkdnflow").setup() end,
   },
   {
     "phaazon/hop.nvim",
