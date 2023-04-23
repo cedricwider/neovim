@@ -21,7 +21,7 @@ return {
     "nvim-notify",
     opts = {
       level = "info",
-      timeout = 3,
+      timeout = 1500,
       render = "compact",
     },
   },
