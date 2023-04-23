@@ -60,20 +60,37 @@ return {
       desc = "Vertical split buffer from tabline",
     },
     --
-    -- window management/navigation
+    -- Miscellaneous and overrides
     --
     ["<leader>e"] = false, --unmap default mapping
-    ["<leader>fe"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
+    ["<leader>fe"] = { function() require("neo-tree").focus("filesystem", true, true) end, desc = "Toggle Explorer" },
+    ["<leader>fg"] = {
+      function() require("neo-tree").focus("git_status", false, true) end,
+      desc = "Toggle Git Explorer",
+    },
     ["<M-e>"] = {
       function()
         if vim.bo.filetype == "neo-tree" then
           vim.cmd.wincmd "p"
         else
-          vim.cmd.Neotree "focus"
+          require("neo-tree").focus("filesystem", true, false)
         end
       end,
       desc = "Toggle Explorer Focus",
     },
+    ["<M-g>"] = {
+      function()
+        if vim.bo.filetype == "neo-tree" then
+          vim.cmd.wincmd "p"
+        else
+          require("neo-tree").focus("git_status", true, false)
+        end
+      end,
+      desc = "Toggle Git Explorer Focus",
+    },
+    --
+    -- window management/navigation
+    --
     ["<C-h>"] = { function() require("smart-splits").move_cursor_left() end, desc = "Move to left split" },
     ["<C-j>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" },
     ["<C-k>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" },
