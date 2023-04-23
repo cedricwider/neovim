@@ -1,7 +1,7 @@
 return {
   {
     "renerocksai/telekasten.nvim",
-    event = "User AstroFile",
+    event = "CmdlineEnter",
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "renerocksai/calendar-vim",
