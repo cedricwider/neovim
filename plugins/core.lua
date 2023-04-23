@@ -19,6 +19,14 @@ return {
       return opts
     end,
   },
+  {
+    "nvim-notify",
+    opts = {
+      level = "info",
+      timeout = 3,
+      render = "compact",
+    },
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
