@@ -101,14 +101,6 @@ return {
     ["<leader>tn"] = { "<cmd>lua require('neotest').run.run()<cr>", desc = "Nearest" },
     ["<leader>ts"] = { "<cmd>lua require('neotest').summary.toggle()<cr>", desc = "Sumamry" },
     --
-    -- Overseer
-    --
-    ["<leader>o"] = { name = "🫣 Overseer" },
-    ["<leader>ot"] = { "<cmd>lua require('overseer').toggle()<cr>", desc = "Toggle" },
-    ["<leader>or"] = { "<cmd>OverseerRun<cr>", desc = "Run Task" },
-    ["<leader>oi"] = { "<cmd>OverseerInfo<cr>", desc = "Show information" },
-    ["<leader>ol"] = { "<cmd>OverseerTaskAction<cr>", desc = "List tasks" },
-    --
     -- Git
     --
     ["<leader>ga"] = { function() require("gitsigns").stage_hunk() end, desc = "Stage Git hunk" },
