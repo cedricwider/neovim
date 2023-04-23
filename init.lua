@@ -81,9 +81,14 @@ return {
       pattern = { "*.md" },
       callback = function()
         require("which-key").register({
+          ["<leader>z"] = { name = "📔 Zettelkasten" },
           ["<CR>"] = { function() require("telekasten").follow_link() end, "Follow link" },
           ["<BS>"] = { "<cmd>e#<CR>", "Follow back" },
           ["<c-space>"] = { function() require("telekasten").toggle_todo() end, "Toggle todo" },
+          ["<leader>zf"] = { function() require("telekasten").find_notes() end, "Find zettels" },
+          ["<leader>zc"] = { function() require("telekasten").new_note() end, "Create note" },
+          ["<leader>zC"] = { function() require("telekasten").new_templated_note() end, "Create templated note" },
+          ["<leader>zl"] = { function() require("telekasten").insert_link { i = true } end, "Insert link" },
         }, { buffer = vim.api.nvim_get_current_buf() })
       end,
     })
