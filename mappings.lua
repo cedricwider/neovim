@@ -12,8 +12,6 @@ return {
     ["[q"] = { "<cmd>cprevious<cr>", desc = "Previous Quickfix Item" },
     ["]q"] = { "<cmd>cnext<cr>", desc = "Next Quickfix Item" },
     ["<leader><tab>"] = { "<cmd>Other<cr>", desc = "Jump to 'other' file" },
-    ["<leader><space>"] = { function() require("harpoon.ui").nav_next() end, desc = "Harpoon next" },
-    ["<space><leader>"] = { function() require("harpoon.ui").nav_prev() end, desc = "Harpoon prev" },
     ["<leader>w"] = nil,
     ["<leader>s"] = { "<cmd>wall<cr>", desc = "Save all files" },
     ["<leader>x"] = { "<cmd>qa<cr>", desc = "Quit neovim" },
@@ -101,11 +99,20 @@ return {
     ["<leader>j"] = { name = "↗ Jump" },
     ["<leader>jb"] = { "<cmd>HopWordBC<cr>", desc = "Before Cursor" },
     ["<leader>jj"] = { "<cmd>HopLineAC<cr>", desc = "Line downwards" },
-    ["<leader>jl"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "List marks" },
-    ["<leader>jm"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Mark file" },
+    ["<leader>jl"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "List marks" },
     ["<leader>jk"] = { "<cmd>HopLineBC<cr>", desc = "Line upwards" },
     ["<leader>jo"] = { "<cmd>Telescope treesitter theme=ivy<cr>", desc = "Symbols" },
     ["<leader>jw"] = { "<cmd>HopWordAC<cr>", desc = "Word" },
+    --
+    -- Harpooning
+    --
+    ["<leader><space>"] = { function() require("harpoon.ui").nav_next() end, desc = "Harpoon next" },
+    ["<space><leader>"] = { function() require("harpoon.ui").nav_prev() end, desc = "Harpoon prev" },
+    ["<M-m>"] = { function() require("harpoon.mark").add_file() end, desc = "Mark file" },
+    ["<M-1>"] = { function() require("harpoon.ui").nav_file(1) end, desc = "Move to file 1" },
+    ["<M-2>"] = { function() require("harpoon.ui").nav_file(2) end, desc = "Move to file 2" },
+    ["<M-3>"] = { function() require("harpoon.ui").nav_file(3) end, desc = "Move to file 3" },
+    ["<M-4>"] = { function() require("harpoon.ui").nav_file(4) end, desc = "Move to file 4" },
     --
     -- Test
     --
