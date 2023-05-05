@@ -12,7 +12,7 @@ return {
     ["[q"] = { "<cmd>cprevious<cr>", desc = "Previous Quickfix Item" },
     ["]q"] = { "<cmd>cnext<cr>", desc = "Next Quickfix Item" },
     ["<leader><tab>"] = { "<cmd>Other<cr>", desc = "Jump to 'other' file" },
-    ["<leader>w"] = nil,
+    ["<leader>w"] = nil, -- used to be "save"
     ["<leader>s"] = { "<cmd>wall<cr>", desc = "Save all files" },
     ["<leader>x"] = { "<cmd>qa<cr>", desc = "Quit neovim" },
     ["[<space>"] = {
