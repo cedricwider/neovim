@@ -103,6 +103,7 @@ return {
     ["<leader>jk"] = { "<cmd>HopLineBC<cr>", desc = "Line upwards" },
     ["<leader>jo"] = { "<cmd>Telescope treesitter theme=ivy<cr>", desc = "Symbols" },
     ["<leader>jw"] = { "<cmd>HopWordAC<cr>", desc = "Word" },
+    ["<leader>jp"] = { function() require("telescope").extensions.monorepo.monorepo() end, desc = "Monorepo Project" },
     --
     -- Harpooning
     --
@@ -135,6 +136,13 @@ return {
     -- LSP
     --
     ["<leader>lt"] = { function() require("trouble").toggle() end, desc = "Trouble toggle" },
+    --
+    -- MonoRepo
+    --
+    ["<leader>m"] = { name = "Monorepo" },
+    ["<leader>ma"] = { "<cmd>lua require('monorepo').add_project()<cr>", desc = "Add Project" },
+    ["<leader>md"] = { "<cmd>lua require('monorepo').remove_project()<cr>", desc = "Remove Project" },
+    ["<leader>mt"] = { "<cmd>lua require('monorepo').toggle_project()<cr>", desc = "Toggle Project" },
   },
   t = {
     -- setting a mapping to false will disable it
