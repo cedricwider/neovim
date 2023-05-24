@@ -11,9 +11,13 @@ return {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
   {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    after = "nvim-treesitter",
-    requires = "nvim-treesitter/nvim-treesitter",
+    "imNel/monorepo.nvim",
+    config = function()
+      require("monorepo").setup {
+        -- Your config here!
+      }
+    end,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
   {
     "renerocksai/telekasten.nvim",
