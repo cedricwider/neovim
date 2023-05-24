@@ -1,4 +1,6 @@
 return {
+  { "sindrets/diffview.nvim" },
+  { "elkowar/yuck.vim" },
   {
     "imNel/monorepo.nvim",
     config = function()
@@ -32,7 +34,12 @@ return {
     event = "User AstroFile",
     config = function() require("hop").setup() end,
   },
-  { "sindrets/diffview.nvim" },
+  {
+    "imNel/monorepo.nvim",
+    event = "User AstroFile",
+    config = function() require("monorepo").setup() end,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  },
   {
     "TimUntersberger/neogit",
     requires = {

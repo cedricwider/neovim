@@ -22,6 +22,14 @@ return {
             target = "server/src/%1/%2.ts",
           },
           {
+            pattern = "server/src/(.*)/(.*).ts$",
+            target = "server/test/unit/%1/%2.spec.ts",
+          },
+          {
+            pattern = "server/test/unit/(.*)/(.*).spec.ts$",
+            target = "server/src/%1/%2.ts",
+          },
+          {
             pattern = "client/test/(.*)/(.*).spec.ts$",
             target = "client/%1/%2.ts",
           },
@@ -36,6 +44,14 @@ return {
           {
             pattern = "client/test/(.*)/(.*).spec.ts$",
             target = "client/%1/%2.vue",
+          },
+          {
+            pattern = "src/(.*)/(.*).ts$",
+            target = "test/unit/%1/%2.spec.ts",
+          },
+          {
+            pattern = "test/unit/(.*)/(.*).spec.ts$",
+            target = "src/%1/%2.ts",
           },
         },
       }
