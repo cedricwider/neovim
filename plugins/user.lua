@@ -11,6 +11,11 @@ return {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   },
   {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  },
+  {
     "renerocksai/telekasten.nvim",
     event = "CmdlineEnter",
     dependencies = {

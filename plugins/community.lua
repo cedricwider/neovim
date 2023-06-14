@@ -5,14 +5,14 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.gruvbox" },
-  { import = "astrocommunity.colorscheme.tokyonight" },
+  { import = "astrocommunity.colorscheme.github-nvim-theme" },
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.utility.noice-nvim" },
   {
     -- further customize the options set by the community
     "copilot.lua",
