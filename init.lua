@@ -50,25 +50,6 @@ return {
       -- "pyright"
     },
   },
-  -- Configure require("lazy").setup() options
-  lazy = {
-    defaults = { lazy = true },
-    performance = {
-      rtp = {
-        -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
-      },
-    },
-  },
-  -- add new user interface icon
-  icons = {
-    VimIcon = "",
-    ScrollText = "",
-    GitBranch = "",
-    GitAdd = "",
-    GitChange = "",
-    GitDelete = "",
-  },
 
   -- modify variables used by heirline but not defined in the setup call directly
   heirline = {
@@ -83,6 +64,7 @@ return {
       -- use helper function to get highlight group properties
       local comment_fg = get_hlgroup("Comment").fg
       hl.git_branch_fg = comment_fg
+      hl.lsp_fg = comment_fg
       hl.git_added = comment_fg
       hl.lsp_fg = comment_fg
       hl.git_changed = comment_fg
@@ -103,6 +85,25 @@ return {
         statusline = false,
       },
     },
+  },
+  -- Configure require("lazy").setup() options
+  lazy = {
+    defaults = { lazy = true },
+    performance = {
+      rtp = {
+        -- customize default disabled vim plugins
+        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+      },
+    },
+  },
+  -- add new user interface icon
+  icons = {
+    VimIcon = "",
+    ScrollText = "",
+    GitBranch = "",
+    GitAdd = "",
+    GitChange = "",
+    GitDelete = "",
   },
 
   -- This function is run last and is a good place to configuring
