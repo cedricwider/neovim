@@ -84,6 +84,7 @@ return {
       local comment_fg = get_hlgroup("Comment").fg
       hl.git_branch_fg = comment_fg
       hl.git_added = comment_fg
+      hl.lsp_fg = comment_fg
       hl.git_changed = comment_fg
       hl.git_removed = comment_fg
       hl.blank_bg = get_hlgroup("Folded").fg
