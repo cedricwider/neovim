@@ -99,4 +99,52 @@ return {
     after = "nvim-treesitter",
     requires = "nvim-treesitter/nvim-treesitter",
   },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    ---@type Flash.Config
+    opts = {
+      char = {
+        enabled = true,
+        -- by default all keymaps are enabled, but you can disable some of them,
+        -- by removing them from the list.
+        keys = { "f", "F", "t", "T", "," },
+        search = { wrap = false },
+        highlight = { backdrop = true },
+        jump = { register = false },
+      },
+    },
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function() require("flash").jump() end,
+        desc = "Flash",
+      },
+      {
+        "S",
+        mode = { "n", "o", "x" },
+        function() require("flash").treesitter() end,
+        desc = "Flash Treesitter",
+      },
+      {
+        "r",
+        mode = "o",
+        function() require("flash").remote() end,
+        desc = "Remote Flash",
+      },
+      {
+        "R",
+        mode = { "o", "x" },
+        function() require("flash").treesitter_search() end,
+        desc = "Flash Treesitter Search",
+      },
+      {
+        "<c-s>",
+        mode = { "c" },
+        function() require("flash").toggle() end,
+        desc = "Toggle Flash Search",
+      },
+    },
+  },
 }
