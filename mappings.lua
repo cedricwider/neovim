@@ -136,6 +136,12 @@ return {
     -- LSP
     --
     ["<leader>lt"] = { function() require("trouble").toggle() end, desc = "Trouble toggle" },
+    ["<leader>lo"] = {
+      function()
+        vim.lsp.buf.execute_command { command = "_typescript.organizeImports", arguments = { vim.fn.expand "%:p" } }
+      end,
+      desc = "Organize Imports (nodejs)",
+    },
     --
     -- MonoRepo
     --
