@@ -34,7 +34,7 @@ return {
             event = "msg_show",
             kind = "search_count",
           },
-          opts = { skip = true },
+          view = "mini",
         },
         {
           view = "cmdline",
