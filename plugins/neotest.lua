@@ -4,6 +4,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
       "olimorris/neotest-rspec",
     },
     event = "User AstroFile",
@@ -13,9 +14,12 @@ return {
         adapters = {
           require "neotest-jest" {
             -- jest options
-            jestCommand = "./node_modules/.bin/jest",
+            jestCommand = "npm run test --",
             jestConfigFile = "jest.config.js",
-            env = { CI = true },
+            cwd = function(_) return vim.fn.getcwd() end,
+          },
+          require "neotest-vitest" {
+            -- vitestCommand = "npm test --",
             cwd = function(_) return vim.fn.getcwd() end,
           },
           require "neotest-rspec" {
