@@ -93,6 +93,7 @@ return {
     ["<C-j>"] = { function() require("smart-splits").move_cursor_down() end, desc = "Move to below split" },
     ["<C-k>"] = { function() require("smart-splits").move_cursor_up() end, desc = "Move to above split" },
     ["<C-l>"] = { function() require("smart-splits").move_cursor_right() end, desc = "Move to right split" },
+
     --
     -- Jump
     --
@@ -107,8 +108,6 @@ return {
     --
     -- Harpooning
     --
-    ["<leader><space>"] = { function() require("harpoon.ui").nav_next() end, desc = "Harpoon next" },
-    ["<space><leader>"] = { function() require("harpoon.ui").nav_prev() end, desc = "Harpoon prev" },
     ["<M-m>"] = { function() require("harpoon.mark").add_file() end, desc = "Mark file" },
     ["<M-1>"] = { function() require("harpoon.ui").nav_file(1) end, desc = "Move to file 1" },
     ["<M-2>"] = { function() require("harpoon.ui").nav_file(2) end, desc = "Move to file 2" },

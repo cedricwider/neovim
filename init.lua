@@ -120,6 +120,7 @@ return {
       --   ["~/%.config/foo/.*"] = "fooscript",
       -- },
     }
+
     -- create custom keybindings for markdown files
     local mdGroupId = vim.api.nvim_create_augroup("markdown", { clear = true })
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
