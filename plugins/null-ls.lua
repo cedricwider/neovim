@@ -21,9 +21,10 @@ return {
         command = "bundle",
         args = vim.list_extend({ "exec", "rubocop" }, diagnoser.rubocop._opts.args),
       },
+
       -- Formatter sources
       formatter.stylua,
-      formatter.prettier,
+      formatter.prettierd,
       formatter.eslint_d,
       formatter.rubocop.with {
         command = "bundle",
