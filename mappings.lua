@@ -60,7 +60,17 @@ return {
     --
     -- Miscellaneous and overrides
     --
-    ["<leader>fe"] = { function() require("ranger-nvim").open(true) end, desc = "Open Ranger" },
+    ["<leader>e"] = false,
+    ["<leader>o"] = false,
+    ["<leader>rr"] = { function() require("ranger-nvim").open(true) end, desc = "Open Ranger" },
+    ["<leader>fe"] = {
+      function() require("neo-tree.command").execute { action = "show", toggle = true } end,
+      desc = "Open NeoTree",
+    },
+    ["<leader>fg"] = {
+      function() require("neo-tree.command").execute { action = "show", toggle = true, source = "git_status" } end,
+      desc = "Open NeoTree (Git)",
+    },
     --
     -- window management/navigation
     --
