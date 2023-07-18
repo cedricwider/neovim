@@ -6,7 +6,7 @@ return {
       char = {
         enabled = true,
         -- when to hide flash
-        autohide = function(motion)
+        autohide = function(_motion)
           -- autohide flash when the operator is `y`
           return vim.fn.mode(true):find "no" and vim.v.operator == "y"
         end,
