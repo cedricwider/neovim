@@ -86,6 +86,7 @@ return {
     requires = "kyazdani42/nvim-web-devicons",
     config = function() require("trouble").setup() end,
   },
+  { "folke/neodev.nvim", opts = {} },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     after = "nvim-treesitter",
