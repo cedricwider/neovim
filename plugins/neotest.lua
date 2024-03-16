@@ -14,10 +14,11 @@ return {
         adapters = {
           require "neotest-jest" {
             -- jest options
+            jest_test_discovery = false,
             jestCommand = "npm run test:unit --",
             jestConfigFile = function()
               local currentFile = vim.fn.expand "%:p"
-              return vim.fs.find({ "jest.config.js", "jest-unit.ts" }, {
+              return vim.fs.find({ "jest.config.js", "jest-unit.ts", "jest-e2e.js" }, {
                 upward = true,
                 stop = vim.fn.getcwd(),
                 path = vim.fs.dirname(currentFile),

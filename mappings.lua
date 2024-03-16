@@ -63,14 +63,19 @@ return {
     ["<leader>e"] = false,
     ["<leader>o"] = false,
     ["<leader>rr"] = { function() require("ranger-nvim").open(true) end, desc = "Open Ranger" },
+    --
+    -- Search and Find
     ["<leader>fe"] = {
       function() require("neo-tree.command").execute { action = "focus", toggle = true } end,
       desc = "Open NeoTree",
     },
-
     ["<leader>fg"] = {
       function() require("neo-tree.command").execute { action = "focus", toggle = true, source = "git_status" } end,
       desc = "Open NeoTree (Git)",
+    },
+    ["<leader>fB"] = {
+      function() require("telescope.builtin").live_grep { grep_open_files = true } end,
+      desc = "Search in open buffers",
     },
     --
     -- window management/navigation
@@ -134,9 +139,5 @@ return {
     ["<leader>ma"] = { "<cmd>lua require('monorepo').add_project()<cr>", desc = "Add Project" },
     ["<leader>md"] = { "<cmd>lua require('monorepo').remove_project()<cr>", desc = "Remove Project" },
     ["<leader>mt"] = { "<cmd>lua require('monorepo').toggle_project()<cr>", desc = "Toggle Project" },
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
   },
 }

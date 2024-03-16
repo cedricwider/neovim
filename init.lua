@@ -1,3 +1,8 @@
+if vim.g.neovide then
+  vim.g.neovide_scale_factor = 1.2
+  vim.g.neovide_transparency = 0.95
+end
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -33,7 +38,6 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          "telekasten",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -120,24 +124,5 @@ return {
       --   ["~/%.config/foo/.*"] = "fooscript",
       -- },
     }
-
-    -- create custom keybindings for markdown files
-    local mdGroupId = vim.api.nvim_create_augroup("markdown", { clear = true })
-    vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-      group = mdGroupId,
-      pattern = { "*.md" },
-      callback = function()
-        require("which-key").register({
-          ["<leader>z"] = { name = "📔 Zettelkasten" },
-          ["<CR>"] = { function() require("telekasten").follow_link() end, "Follow link" },
-          ["<BS>"] = { "<cmd>e#<CR>", "Follow back" },
-          ["<c-space>"] = { function() require("telekasten").toggle_todo() end, "Toggle todo" },
-          ["<leader>zf"] = { function() require("telekasten").find_notes() end, "Find zettels" },
-          ["<leader>zc"] = { function() require("telekasten").new_note() end, "Create note" },
-          ["<leader>zC"] = { function() require("telekasten").new_templated_note() end, "Create templated note" },
-          ["<leader>zl"] = { function() require("telekasten").insert_link { i = true } end, "Insert link" },
-        }, { buffer = vim.api.nvim_get_current_buf() })
-      end,
-    })
   end,
 }

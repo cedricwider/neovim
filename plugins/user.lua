@@ -1,30 +1,6 @@
 return {
   { "tpope/vim-repeat" },
   { "sindrets/diffview.nvim" },
-  { "elkowar/yuck.vim" },
-  {
-    "imNel/monorepo.nvim",
-    config = function()
-      require("monorepo").setup {
-        -- Your config here!
-      }
-    end,
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-  },
-  {
-    "renerocksai/telekasten.nvim",
-    event = "CmdlineEnter",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "renerocksai/calendar-vim",
-      "nvim-telescope/telescope-media-files.nvim",
-    },
-    config = function()
-      require("telekasten").setup {
-        home = vim.fn.expand "~/work/notes/",
-      }
-    end,
-  },
   {
     "kylechui/nvim-surround",
     event = "User AstroFile",

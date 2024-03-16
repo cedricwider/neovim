@@ -8,6 +8,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     scrolloff = 1, -- set the scrolloff option
+    guifont = "JetBrainsMono Nerd Font:h11", -- set the guifont option
   },
   g = {
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
