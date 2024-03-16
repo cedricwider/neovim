@@ -1,6 +1,11 @@
 return {
   { "tpope/vim-repeat" },
   { "sindrets/diffview.nvim" },
+  { 
+    "xiyaowong/transparent.nvim",
+    event = "User AstroFile",
+    config = function() require("transparent").setup() end,
+  },
   {
     "kylechui/nvim-surround",
     event = "User AstroFile",
