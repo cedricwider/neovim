@@ -13,8 +13,9 @@ return {
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.utility.noice-nvim" },
+
+  -- further customize the options set by the community
   {
-    -- further customize the options set by the community
     "copilot.lua",
     opts = {
       suggestion = {
