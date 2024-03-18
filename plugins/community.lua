@@ -29,4 +29,19 @@ return {
       },
     },
   },
+
+  {
+    "catppuccin",
+    opts = {
+      background = {
+        light = "latte",
+        dark = "mocha",
+      },
+      integrations = {
+        noice = true,
+        notify = true,
+        lsp_trouble = true,
+      },
+    },
+  },
 }

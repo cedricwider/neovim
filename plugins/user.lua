@@ -2,8 +2,6 @@ return {
   { "tpope/vim-repeat" },
   { "sindrets/diffview.nvim" },
   {
-  },
-  {
     "kylechui/nvim-surround",
     event = "User AstroFile",
     config = function() require("nvim-surround").setup() end,
