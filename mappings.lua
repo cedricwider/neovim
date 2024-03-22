@@ -1,3 +1,5 @@
+local harpoon = require "harpoon"
+harpoon.setup {}
 -- Mapping data with "desc" stored directly by vim.keymap.set().
 --
 -- Please use this mappings table to set keyboard mapping since this is the
@@ -91,7 +93,7 @@ return {
     ["<leader>j"] = { name = "↗ Jump" },
     ["<leader>jb"] = { "<cmd>HopWordBC<cr>", desc = "Before Cursor" },
     ["<leader>jj"] = { "<cmd>HopLineAC<cr>", desc = "Line downwards" },
-    ["<leader>jl"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "List marks" },
+    ["<leader>jl"] = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "List marks" },
     ["<leader>jk"] = { "<cmd>HopLineBC<cr>", desc = "Line upwards" },
     ["<leader>jo"] = { "<cmd>Telescope treesitter theme=ivy<cr>", desc = "Symbols" },
     ["<leader>jw"] = { "<cmd>HopWordAC<cr>", desc = "Word" },
@@ -99,11 +101,11 @@ return {
     --
     -- Harpooning
     --
-    ["<M-m>"] = { function() require("harpoon.mark").add_file() end, desc = "Mark file" },
-    ["<M-1>"] = { function() require("harpoon.ui").nav_file(1) end, desc = "Move to file 1" },
-    ["<M-2>"] = { function() require("harpoon.ui").nav_file(2) end, desc = "Move to file 2" },
-    ["<M-3>"] = { function() require("harpoon.ui").nav_file(3) end, desc = "Move to file 3" },
-    ["<M-4>"] = { function() require("harpoon.ui").nav_file(4) end, desc = "Move to file 4" },
+    ["<M-m>"] = { function() harpoon:list():append() end, desc = "Mark file" },
+    ["<M-1>"] = { function() harpoon:list():select(1) end, desc = "Move to file 1" },
+    ["<M-2>"] = { function() harpoon:list():select(2) end, desc = "Move to file 2" },
+    ["<M-3>"] = { function() harpoon:list():select(3) end, desc = "Move to file 3" },
+    ["<M-4>"] = { function() harpoon:list():select(4) end, desc = "Move to file 4" },
     --
     -- Test
     --
