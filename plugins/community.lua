@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.debugging.nvim-bqf" },
   { import = "astrocommunity.indent.indent-tools-nvim" },
-  { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.utility.noice-nvim" },
