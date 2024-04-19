@@ -1,5 +1,6 @@
 return {
   { "tpope/vim-repeat" },
+  { "nvim-neotest/nvim-nio" },
   { "sindrets/diffview.nvim" },
   {
     "kylechui/nvim-surround",
